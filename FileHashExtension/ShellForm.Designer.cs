@@ -30,13 +30,8 @@ namespace FileHashExtension
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.fileSizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hashDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fileDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pathDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fileInformationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bgWorker = new System.ComponentModel.BackgroundWorker();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -54,18 +49,15 @@ namespace FileHashExtension
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.fileSizeDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.hashDataGridViewTextBoxColumn,
-            this.fileDateDataGridViewTextBoxColumn,
-            this.pathDataGridViewTextBoxColumn});
+            this.fileSizeDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.fileInformationBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(679, 64);
+            this.dataGridView1.Size = new System.Drawing.Size(912, 81);
             this.dataGridView1.TabIndex = 0;
             // 
             // fileSizeDataGridViewTextBoxColumn
@@ -78,40 +70,6 @@ namespace FileHashExtension
             this.fileSizeDataGridViewTextBoxColumn.HeaderText = "File Size";
             this.fileSizeDataGridViewTextBoxColumn.Name = "fileSizeDataGridViewTextBoxColumn";
             this.fileSizeDataGridViewTextBoxColumn.Width = 71;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // hashDataGridViewTextBoxColumn
-            // 
-            this.hashDataGridViewTextBoxColumn.DataPropertyName = "Hash";
-            this.hashDataGridViewTextBoxColumn.HeaderText = "Hash";
-            this.hashDataGridViewTextBoxColumn.Name = "hashDataGridViewTextBoxColumn";
-            this.hashDataGridViewTextBoxColumn.Width = 57;
-            // 
-            // fileDateDataGridViewTextBoxColumn
-            // 
-            this.fileDateDataGridViewTextBoxColumn.DataPropertyName = "FileDate";
-            dataGridViewCellStyle2.Format = "yyyy-MM-dd HH:mm:ss zzzz";
-            this.fileDateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
-            this.fileDateDataGridViewTextBoxColumn.HeaderText = "File Date";
-            this.fileDateDataGridViewTextBoxColumn.Name = "fileDateDataGridViewTextBoxColumn";
-            this.fileDateDataGridViewTextBoxColumn.Width = 74;
-            // 
-            // pathDataGridViewTextBoxColumn
-            // 
-            this.pathDataGridViewTextBoxColumn.DataPropertyName = "Path";
-            this.pathDataGridViewTextBoxColumn.HeaderText = "Path";
-            this.pathDataGridViewTextBoxColumn.Name = "pathDataGridViewTextBoxColumn";
-            this.pathDataGridViewTextBoxColumn.Width = 54;
-            // 
-            // fileInformationBindingSource
-            // 
-            this.fileInformationBindingSource.DataSource = typeof(FileHashExtension.FileInformation);
             // 
             // bgWorker
             // 
@@ -128,7 +86,7 @@ namespace FileHashExtension
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(679, 64);
+            this.panel1.Size = new System.Drawing.Size(912, 81);
             this.panel1.TabIndex = 1;
             // 
             // lblFileName
@@ -154,7 +112,7 @@ namespace FileHashExtension
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(679, 64);
+            this.ClientSize = new System.Drawing.Size(912, 81);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;

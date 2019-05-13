@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.202
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileHashExtension", "FileHashExtension\FileHashExtension.csproj", "{8A948614-F3B5-40D5-9F32-D676E0E754C9}"
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "FileHashExtensionSetUp", "FileHashExtensionSetUp\FileHashExtensionSetUp.vdproj", "{8763E01F-FEDC-4927-A24A-4F70CEC5EB64}"
@@ -38,5 +40,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {35A7073E-F5F9-4DC4-A497-E5CBAC386897}
 	EndGlobalSection
 EndGlobal

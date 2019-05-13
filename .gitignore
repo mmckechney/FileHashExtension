@@ -51,6 +51,7 @@ build/
 [Oo]bj/
 .svn/
 .nuget/
+.vs/
 packages
 
 # MSTest test Results
