@@ -86,15 +86,20 @@ namespace FileHashExtension
             for (int i = 0; i < dataGridView1.Columns.Count; i++)
                 colWidth += dataGridView1.Columns[i].Width;
 
-            if (colWidth > 730) colWidth = 730;
+            //if (colWidth > 900) colWidth = 900;
 
             if (dataGridView1.Rows.Count < 10)
             {
-                this.Width = 12 + colWidth;
+                this.Width = 20 + colWidth;
             }
             else
             {
-                this.Width = 30 + colWidth;
+                this.Width = 40 + colWidth;
+            }
+
+            if(this.Width > Screen.PrimaryScreen.WorkingArea.Width)
+            {
+                this.Width = Screen.PrimaryScreen.WorkingArea.Width - 100;
             }
             //}
             //See if we're going to hang over the right side of the screen.. if so, shift to the left...
@@ -119,41 +124,46 @@ namespace FileHashExtension
 
         private void ShellForm_Load(object sender, EventArgs e)
         {
-            string desc = HashHelper.GetDescription(hashType);
-            this.hashDataGridViewTextBoxColumn.HeaderText = desc + " File Hash";
-            this.Text = $"{desc} File Hash";
+            try
+            {
+                string desc = HashHelper.GetDescription(hashType);
+                this.hashDataGridViewTextBoxColumn.HeaderText = desc + " File Hash";
+                this.Text = $"{desc} File Hash";
 
-            //this.pathDataGridViewTextBoxColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-           //this.pathDataGridViewTextBoxColumn.Width = 200;
+                //this.pathDataGridViewTextBoxColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+                //this.pathDataGridViewTextBoxColumn.Width = 200;
 
-            Point point = System.Windows.Forms.Cursor.Position;
-            Point screenPoint = this.PointToScreen(point);
-            this.Location = screenPoint;
+                Point point = System.Windows.Forms.Cursor.Position;
+                Point screenPoint = this.PointToScreen(point);
+                this.Location = screenPoint;
 
-            //if (Properties.Settings.Default.CustomColumnConfig != null)
-            //{
-            //    List<ColumnConfig> cfgs = Properties.Settings.Default.CustomColumnConfig;
-            //    foreach (DataGridViewColumn col in this.dataGridView1.Columns)
-            //    {
-            //        for (int i = 0; i < cfgs.Count; i++)
-            //        {
-            //            if (cfgs[i].ColumnName == col.Name)
-            //            {
-            //                col.Width = cfgs[i].ColumnWidth;
-            //                col.DisplayIndex = cfgs[i].SortOrder;
-            //            }
-            //        }
-            //    }
-            //}
-            //else
-            //{
-            this.nameDataGridViewTextBoxColumn.DisplayIndex = 0;
-            this.hashDataGridViewTextBoxColumn.DisplayIndex = 1;
-            this.fileSizeDataGridViewTextBoxColumn.DisplayIndex = 2;
-            this.fileDateDataGridViewTextBoxColumn.DisplayIndex = 3;
-            this.pathDataGridViewTextBoxColumn.DisplayIndex = 4;
-            //}
-
+                //if (Properties.Settings.Default.CustomColumnConfig != null)
+                //{
+                //    List<ColumnConfig> cfgs = Properties.Settings.Default.CustomColumnConfig;
+                //    foreach (DataGridViewColumn col in this.dataGridView1.Columns)
+                //    {
+                //        for (int i = 0; i < cfgs.Count; i++)
+                //        {
+                //            if (cfgs[i].ColumnName == col.Name)
+                //            {
+                //                col.Width = cfgs[i].ColumnWidth;
+                //                col.DisplayIndex = cfgs[i].SortOrder;
+                //            }
+                //        }
+                //    }
+                //}
+                //else
+                //{
+                this.nameDataGridViewTextBoxColumn.DisplayIndex = 0;
+                this.hashDataGridViewTextBoxColumn.DisplayIndex = 1;
+                this.fileSizeDataGridViewTextBoxColumn.DisplayIndex = 2;
+                this.fileDateDataGridViewTextBoxColumn.DisplayIndex = 3;
+                this.pathDataGridViewTextBoxColumn.DisplayIndex = 4;
+                //}
+            }catch(Exception exe)
+            {
+                MessageBox.Show(exe.ToString());
+            }
 
         }
 

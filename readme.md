@@ -4,14 +4,11 @@ This tool is a Windows Shell extension that will calculate the cryptographic has
 
 ## To install
 
-### MSI Installer 
-You can easily install the extension via the MSI installer. Simply click on the installer and follow the instructions
-
-### Manual install
 You can install the application by:
-1. Unzipping the release package zip to the location of your choice
+1. Unzipping the release [package zip](./releases) to the location of your choice
 2. Open an _Adminstrator_ command line window
-3. Run the `register.bat` file. You might get a GAC error, that's OK
+3. Run the `register.bat` file. 
+4. You can either restart the explorer.exe process or reboot your machine 
 
 ## Using File Hash Extension
 Once you have successfully installed the app, you can right-click on any file to bring up the context menu. You should see a new option "Calculate File Hash".
