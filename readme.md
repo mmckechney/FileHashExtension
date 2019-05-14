@@ -5,7 +5,7 @@ This tool is a Windows Shell extension that will calculate the cryptographic has
 ## To install
 
 You can install the application by:
-1. Unzipping the release [package zip](./releases) to the location of your choice
+1. Unzipping the release [package zip](https://github.com/mmckechney/FileHashExtension/releases) to the location of your choice
 2. Open an _Adminstrator_ command line window
 3. Run the `register.bat` file. 
 4. You can either restart the explorer.exe process or reboot your machine 
